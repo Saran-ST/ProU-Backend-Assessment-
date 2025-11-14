@@ -1,40 +1,25 @@
-from rest_framework import generics, permissions
-from .models import Event, RSVP, Review
-from .serializers import EventSerializer, RSVPSerializer, ReviewSerializer
+from rest_framework import generics
+from .models import Employee, Task
+from .serializers import EmployeeSerializer, TaskSerializer
 
 
-# --- Event Views ---
-class EventListCreateView(generics.ListCreateAPIView):
-    queryset = Event.objects.all()
-    serializer_class = EventSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+# Employee CRUD Views
+class EmployeeListCreateView(generics.ListCreateAPIView):
+    queryset = Employee.objects.all().order_by('-id')
+    serializer_class = EmployeeSerializer
 
 
-class EventDetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Event.objects.all()
-    serializer_class = EventSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+class EmployeeRetrieveUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Employee.objects.all()
+    serializer_class = EmployeeSerializer
 
 
-# --- RSVP Views ---
-class RSVPListCreateView(generics.ListCreateAPIView):
-    queryset = RSVP.objects.all()
-    serializer_class = RSVPSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+# Task CRUD Views
+class TaskListCreateView(generics.ListCreateAPIView):
+    queryset = Task.objects.all().order_by('-id')
+    serializer_class = TaskSerializer
 
 
-# --- Review Views ---
-class ReviewListCreateView(generics.ListCreateAPIView):
-    queryset = Review.objects.all()
-    serializer_class = ReviewSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-
-
-class ReviewListCreateView(generics.ListCreateAPIView):
-    queryset = Review.objects.all()
-    serializer_class = ReviewSerializer
-
-class RSVPListCreateView(generics.ListCreateAPIView):
-    queryset = RSVP.objects.all()
-    serializer_class = RSVPSerializer
-
+class TaskRetrieveUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
