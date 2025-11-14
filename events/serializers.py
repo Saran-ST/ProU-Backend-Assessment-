@@ -1,19 +1,16 @@
 from rest_framework import serializers
-from .models import Event, RSVP, Review
+from .models import Employee, Task
 
-class EventSerializer(serializers.ModelSerializer):
+
+class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Event
+        model = Employee
         fields = '__all__'
 
 
-class RSVPSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = RSVP
-        fields = '__all__'
+class TaskSerializer(serializers.ModelSerializer):
+    employee_name = serializers.CharField(source='employee.name', read_only=True)
 
-
-class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Review
+        model = Task
         fields = '__all__'

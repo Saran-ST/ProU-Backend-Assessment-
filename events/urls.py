@@ -1,12 +1,17 @@
 from django.urls import path
-from . import views
+from .views import DashboardStatsView
+
+from .views import (
+    EmployeeListCreateView,
+    EmployeeDetailView,
+    TaskListCreateView,
+    TaskDetailView,
+)
 
 urlpatterns = [
-    path('events/', views.EventListCreateView.as_view(), name='event-list-create'),
-    path('events/<int:pk>/', views.EventDetailView.as_view(), name='event-detail'),
-    path('rsvps/', views.RSVPListCreateView.as_view(), name='rsvp-list-create'),
-    path('reviews/', views.ReviewListCreateView.as_view(), name='review-list-create'),
+    path('employees/', EmployeeListCreateView.as_view(), name='employee-list'),
+    path('employees/<int:pk>/', EmployeeDetailView.as_view(), name='employee-detail'),
+    path('dashboard/', DashboardStatsView.as_view(), name='dashboard-stats'),
+    path('tasks/', TaskListCreateView.as_view(), name='task-list'),
+    path('tasks/<int:pk>/', TaskDetailView.as_view(), name='task-detail'),
 ]
-from django.urls import path
-from . import views
-
