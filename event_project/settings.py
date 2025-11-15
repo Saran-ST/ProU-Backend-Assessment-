@@ -4,7 +4,12 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-nlbv_c8i$3^j-(x90haqg%!w97#4h&*z*n(-&8!8meiu+=qn*9'
 DEBUG = True
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    "web-production-9fbb.up.railway.app"
+]
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -14,14 +19,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
     'drf_yasg',
     'django_filters',
     'events',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-     'whitenoise.middleware.WhiteNoiseMiddleware', 
+    'whitenoise.middleware.WhiteNoiseMiddleware', 
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -30,13 +37,20 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://web-production-9fbb.up.railway.app",
+    "http://localhost:8000",
+]
+CORS_ALLOW_ALL_ORIGINS = True   
+CORS_ALLOW_CREDENTIALS = True
 ROOT_URLCONF = 'event_project.urls'
+
 
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],   # <-- Added for home.html
+        'DIRS': [BASE_DIR / 'templates'],   
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
