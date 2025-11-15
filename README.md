@@ -23,6 +23,7 @@ This backend system provides APIs for:
 
 **🧪 Bonus Features**
 
+* JWT authentication
 * Search, Filter, Ordering features
 * Swagger UI for api testing
 * Styled homepage UI
@@ -124,6 +125,7 @@ Saran ST
 B.E. Electronics & Communication Engineering
 Sri Venkateswara College of Engineering (2022–2026)
 🔗 GitHub: https://github.com/Saran-ST
+
 
 
 
