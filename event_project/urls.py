@@ -4,29 +4,22 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
+from events.views import home_page  
+
 schema_view = get_schema_view(
     openapi.Info(
         title="Event Management API",
         default_version='v1',
-        description="API documentation for Event Management System",
+        description="API documentation for the Event Management System",
     ),
     public=True,
     permission_classes=(permissions.AllowAny,),
 )
 
 urlpatterns = [
+    path('', home_page, name='home'),  
     path('admin/', admin.site.urls),
-
-    # Add Django's built-in auth login/logout
-    path('accounts/', include('django.contrib.auth.urls')),
-
-    # API routes
     path('api/', include('events.urls')),
-
-    # Docs
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='redoc'),
-
-    # Swagger as homepage
-    path('', schema_view.with_ui('swagger', cache_timeout=0)),
 ]

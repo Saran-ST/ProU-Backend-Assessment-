@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Management API</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #4b1beb, #9d68ff);
+            color: white;
+            padding: 110px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 40px;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(8px);
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            padding: 30px 20px;
+            height: 220px; 
+            flex-direction: column;
+            justify-content: space-between;
+            transition: 0.20s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 15px;
+            opacity: 0.85;
+            flex-grow: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 16px;
+            border-radius: 10px;
+            background: #3b055d;
+            color: #efedf6;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.2s;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background: #d435cc;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        footer {
+            opacity: 0.8;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Event Management API</h1>
+
+        <div class="grid">
+
+            <div class="card">
+                <div>
+                    <h3>👨‍💼 Employees</h3>
+                    <p>Manage employee profiles, search, filter & update data.</p>
+                </div>
+                <a href="/api/employees/" class="btn">Open Employees</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <h3>📝 Tasks</h3>
+                    <p>Create tasks, assign employees & track progress.</p>
+                </div>
+                <a href="/api/tasks/" class="btn">Open Tasks</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <h3>📊 Dashboard</h3>
+                    <p>View real-time stats of employees & tasks.</p>
+                </div>
+                <a href="/api/dashboard/" class="btn">View Dashboard</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <h3>📘 Swagger UI</h3>
+                    <p>Interactive API explorer with test console.</p>
+                </div>
+                <a href="/swagger/" class="btn">Open Swagger</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <h3>📕 ReDoc</h3>
+                    <p>Clean, modern API documentation for developers.</p>
+                </div>
+                <a href="/redoc/" class="btn">Open ReDoc</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <h3>🛠 Admin</h3>
+                    <p>Manage database entries from Django Admin panel.</p>
+                </div>
+                <a href="/admin/" class="btn">Admin Login</a>
+            </div>
+
+        </div>
+
+        <footer> SARAN ST</footer>
+
+    </div>
+</body>
+</html>

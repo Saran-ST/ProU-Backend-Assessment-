@@ -63,3 +63,7 @@ class DashboardStatsView(APIView):
             "in_progress_tasks": in_progress_tasks,
         }
         return Response(data)
+from django.shortcuts import render
+
+def home_page(request):
+    return render(request, "home.html")
