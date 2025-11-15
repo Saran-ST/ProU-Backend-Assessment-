@@ -62,7 +62,32 @@ python manage.py runserver
 Local URL
 http://127.0.0.1:8000/
 
-# Screenshots+
+# 📸 Screenshots
+Below are some UI & API screenshots of the Event Management System.
+
+## 🏠 Home Page
+![Home Page](screenshots/home-page-UI.png)
+
+## 📊 Dashboard
+![Dashboard](screenshots/Dashboard.png)
+
+## 👥 Employees List
+![Employees](screenshots/Employees.png)
+
+## 📥 Get Employees API
+![Get Employees](screenshots/Get employees.png)
+
+## 📝 Tasks List
+![Tasks](screenshots/Tasks.png)
+
+## 📤 Get Tasks API
+![Get Tasks](screenshots/Get Tasks.png)
+
+## ❌ Delete Employee API
+![Delete Employee](screenshots/Delete-Employess.png)
+
+## 📘 Swagger UI Documentation
+![Swagger UI](screenshots/Swagger-UI.png)
 
 
 # 🔗 API Endpoints**
@@ -99,6 +124,7 @@ Saran ST
 B.E. Electronics & Communication Engineering
 Sri Venkateswara College of Engineering (2022–2026)
 🔗 GitHub: https://github.com/Saran-ST
+
 
 
 
