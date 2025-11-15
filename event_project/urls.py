@@ -16,10 +16,17 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('django.contrib.auth.urls')),  
+
+    # Add Django's built-in auth login/logout
+    path('accounts/', include('django.contrib.auth.urls')),
+
+    # API routes
     path('api/', include('events.urls')),
+
+    # Docs
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='redoc'),
+
+    # Swagger as homepage
     path('', schema_view.with_ui('swagger', cache_timeout=0)),
 ]
-
