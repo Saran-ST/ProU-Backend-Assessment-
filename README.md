@@ -1,18 +1,18 @@
-**~~ EMPLOYEES AND TASK MANAGER API**
+# EMPLOYEES AND TASK MANAGER API
   A clean, modular, and fully documented backend system for managing Employees and Tasks, built using Django REST Framework.
 This project was developed as part of the ProU Backend Internship Assessment and follows all required functionalities — with multiple bonus enhancements added.
 
 **📘 Overview**
 This backend system provides APIs for:
 
-# Managing Employees
-# Managing Tasks
-# Viewing Dashboard-level analytics
-# API documentation via Swagger & ReDoc
-# Clean, styled homepage with quick navigation
-# The project is structured to be simple, scalable, and readable — ideal for production and onboarding use.
+* Managing Employees
+* Managing Tasks
+* Viewing Dashboard-level analytics
+* API documentation via Swagger & ReDoc
+* Clean, styled homepage with quick navigation
+* The project is structured to be simple, scalable, and readable — ideal for production and onboarding use.
 
-**🎯 Features**
+# 🎯 Features
 **✅ Core Requirements**
 
 * Create, List, Update, Delete Employees
@@ -27,7 +27,7 @@ This backend system provides APIs for:
 * Swagger UI for api testing
 * Styled homepage UI
 
-**🧰Tech Stack  **
+# 🧰Tech Stack  
 ---------------------------------------------------------------------
 | Category               | Tools / Technologies                     |
 | ---------------------- | ---------------------------------------- |
@@ -41,7 +41,7 @@ This backend system provides APIs for:
 | **Utilities**          | Django Filters, Whitenoise, CORS Headers |
 ---------------------------------------------------------------------
 
-**⚙️ Setup & Installation**
+# ⚙️ Setup & Installation
 1️⃣ Clone the Repository
 git clone https://github.com/Saran-ST/ProU-Backend-Assessment-.git
 cd ProU-Backend-Assessment-
@@ -62,10 +62,10 @@ python manage.py runserver
 Local URL
 http://127.0.0.1:8000/
 
-**Screenshots**
+# Screenshots+
 
 
-**🔗 API Endpoints**
+# 🔗 API Endpoints**
 **Employees**
 ----------------------------------------------------------
 | Method    | Endpoint               | Description       |
@@ -99,5 +99,6 @@ Saran ST
 B.E. Electronics & Communication Engineering
 Sri Venkateswara College of Engineering (2022–2026)
 🔗 GitHub: https://github.com/Saran-ST
+
 
 
